@@ -1,7 +1,5 @@
 name: dg_mini_course
-description: A new Flutter project.
-
-publish_to: 'none'
+description: A new Flutter application
 
 version: 1.0.0+1
 
