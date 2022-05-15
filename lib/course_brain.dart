@@ -1,8 +1,16 @@
 import 'question_bank.dart';
+import 'course_material.dart';
 
 class CourseBrain {
-  // ignore: non_constant_identifier_names
-  final List<QuestionBank> _questions_answers = [
+  List<CourseMaterial> get _material => [
+    CourseMaterial(
+        ch1General: 'Once upon a time was a gentleman who wanted to carry a DG by air',
+        ch2Marking: '',
+        ch3Labelling: '',
+        ch4Xxx: ''),
+  ];
+
+  final List<QuestionBank> questions_answers = [
     //Chapter 1 – General
     QuestionBank(
       question1: 'Who is responsible for correct marking and labelling of packages presented for transport?',
@@ -49,3 +57,10 @@ class CourseBrain {
       answer6: ''),
   ];
 }
+
+int _courseNumber = 0;
+
+//String getCourseMaterial(){
+ // return _material[_courseNumber].ch1General;
+//}
+
