@@ -2,15 +2,15 @@ import 'question_bank.dart';
 import 'course_material.dart';
 
 class CourseBrain {
-  List<CourseMaterial> get _material => [
-    CourseMaterial(
-        ch1General: 'Once upon a time was a gentleman who wanted to carry a DG by air',
-        ch2Marking: '',
-        ch3Labelling: '',
-        ch4Xxx: ''),
-  ];
+  //List<CourseMaterial> get _material => [
+    //CourseMaterial(
+      //  ch1General: 'Once upon a time was a gentleman who wanted to carry a DG by air',
+        //ch2Marking: '',
+        //ch3Labelling: '',
+        //ch4Xxx: ''),
+  //];
 
-  final List<QuestionBank> questions_answers = [
+  List<QuestionBank> questions_answers = [
     //Chapter 1 – General
     QuestionBank(
       question1: 'Who is responsible for correct marking and labelling of packages presented for transport?',

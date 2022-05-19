@@ -1,5 +1,8 @@
+import 'package:dg_mini_course/constants.dart';
 import 'package:dg_mini_course/course_brain.dart';
 import 'package:flutter/material.dart';
+import 'general_chapter1.dart';
+import 'constants.dart';
 
 CourseBrain courseBrain = CourseBrain();
 
@@ -10,15 +13,15 @@ class MiniCourse extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.blueGrey,
         appBar: AppBar(
-          backgroundColor: Colors.blueAccent,
-          title: Center(child: Text('Marking and labelling')),
-          titleTextStyle: TextStyle(
-            fontSize: 20.0,
-            fontStyle: FontStyle.italic,
+          backgroundColor: Colors.blue,
+          title: Center(
+            child: Text('Marking and labelling',
+            style: frontpageTextStyle,
+            ),
           ),
         ),
-        backgroundColor: Colors.blueGrey,
         body: SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.0),
@@ -47,7 +50,7 @@ class _CoursePageState extends State<CoursePage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
-                '''Welcome to the dangerous goods course on Marking and labeling.  As soon as you are ready, click the button below and you will be directed to the first chapter.  The course consists of four chapters which all have a question to be answered to continue.  If your answer is correct you will go through to the next chapter, if not you will get another question.  After three wrong answers, you will be brought back to read the chapter again .  Good Luck!''',
+                welcomeText,
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontStyle: FontStyle.italic,
@@ -64,20 +67,18 @@ class _CoursePageState extends State<CoursePage> {
         Expanded(
           child: Padding(
             padding: EdgeInsets.all(15.0),
-            child: FlatButton(
-              textColor: Colors.white,
-              color: Colors.blue,
-              child: Text(
-                'Start the course',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20.0,
-                  fontStyle: FontStyle.italic,
+            child: GestureDetector(
+              child: FlatButton(
+                textColor: Colors.white,
+                color: Colors.blue,
+                child: Text(
+                  'Start the course',
+                  style: frontpageTextStyle,
                 ),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => General()));
+                },
               ),
-              onPressed: () {
-                print('Going to the first chapter');
-              },
             ),
           ),
         ),
