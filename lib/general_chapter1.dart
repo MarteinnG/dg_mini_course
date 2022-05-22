@@ -1,3 +1,5 @@
+import 'package:dg_mini_course/question_page_general.dart';
+
 import 'constants.dart';
 import 'package:flutter/material.dart';
 import 'question_bank.dart';
@@ -44,7 +46,7 @@ class General extends StatelessWidget {
                       style: frontpageTextStyle,
                     ),
                     onPressed: () {
-                      print('question 1');
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => QuestionPageGeneral()));
                     },
                   ),
                 ),

@@ -1,3 +1,4 @@
+import 'package:dg_mini_course/question_page_marking.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
 
@@ -24,7 +25,7 @@ class Marking extends StatelessWidget {
                   child: Text(
                     marking,
                     style: TextStyle(
-                      fontSize: 14.5,
+                      fontSize: 12.0,
                       color: Colors.white,
                     ),
                   ),
@@ -32,7 +33,7 @@ class Marking extends StatelessWidget {
               ),
               Expanded(
                 child: Padding(
-                  padding: EdgeInsets.all(15.0),
+                  padding: EdgeInsets.all(20.0),
                   child: GestureDetector(
                     child: FlatButton(
                       textColor: Colors.white,
@@ -42,7 +43,7 @@ class Marking extends StatelessWidget {
                         style: frontpageTextStyle,
                       ),
                       onPressed: () {
-                        print('question 2');
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => QuestionPageMarking()));
                       },
                     ),
                   ),

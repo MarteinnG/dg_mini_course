@@ -1,15 +1,9 @@
 import 'question_bank.dart';
-import 'course_material.dart';
+
 
 class CourseBrain {
-  //List<CourseMaterial> get _material => [
-    //CourseMaterial(
-      //  ch1General: 'Once upon a time was a gentleman who wanted to carry a DG by air',
-        //ch2Marking: '',
-        //ch3Labelling: '',
-        //ch4Xxx: ''),
-  //];
 
+  // ignore: non_constant_identifier_names
   List<QuestionBank> questions_answers = [
     //Chapter 1 – General
     QuestionBank(
@@ -60,7 +54,7 @@ class CourseBrain {
 
 int _courseNumber = 0;
 
-//String getCourseMaterial(){
- // return _material[_courseNumber].ch1General;
+//String getQuestionBank(){
+  //return questions_answers[_courseNumber].question1;
 //}
 

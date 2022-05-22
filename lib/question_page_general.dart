@@ -1,18 +1,13 @@
-import 'package:dg_mini_course/question_page_labelling.dart';
+import 'package:dg_mini_course/marking_chapter2.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
+import 'course_brain.dart';
+import 'question_bank.dart';
 
-class Labelling extends StatelessWidget {
+class QuestionPageGeneral extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 40.0,
-        titleTextStyle: frontpageTextStyle,
-        title: Text(
-          'Ch.3, Labelling',
-        ),
-      ),
       backgroundColor: Colors.black12,
       body: SafeArea(
         child: Column(
@@ -23,7 +18,7 @@ class Labelling extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.all(15.0),
                 child: Text(
-                  general,
+                  'Hér kemur spurning úr General kaflanum',
                   style: TextStyle(
                     fontSize: 14.5,
                     color: Colors.white,
@@ -39,11 +34,29 @@ class Labelling extends StatelessWidget {
                     textColor: Colors.white,
                     color: Colors.blue,
                     child: Text(
-                      'Question',
+                      'Answer 1',
                       style: frontpageTextStyle,
                     ),
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => QuestionPageLabelling()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => Marking()));
+                    },
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.all(15.0),
+                child: GestureDetector(
+                  child: FlatButton(
+                    textColor: Colors.white,
+                    color: Colors.blue,
+                    child: Text(
+                      'Answer 2',
+                      style: frontpageTextStyle,
+                    ),
+                    onPressed: () {
+                      print('incorrect');
                     },
                   ),
                 ),

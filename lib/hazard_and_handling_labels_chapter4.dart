@@ -1,3 +1,4 @@
+import 'package:dg_mini_course/question_page_haz_hand_labels.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
 
@@ -42,7 +43,7 @@ class HazardAndHandlingLabels extends StatelessWidget {
                       style: frontpageTextStyle,
                     ),
                     onPressed: () {
-                      print('question 4');
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => QuestionPageHazardAndHandlingLabels()));
                     },
                   ),
                 ),
