@@ -16,7 +16,6 @@ class MiniCourse extends StatelessWidget {
         backgroundColor: Colors.black12,
         appBar: AppBar(
           toolbarHeight: 40,
-          backgroundColor: Colors.blueGrey,
           title: Center(
             child: Text('Marking and labelling',
             style: frontpageTextStyle,
@@ -71,7 +70,7 @@ class _CoursePageState extends State<CoursePage> {
             child: GestureDetector(
               child: FlatButton(
                 textColor: Colors.white,
-                color: Colors.blueGrey,
+                color: Colors.blue,
                 child: Text(
                   'Start the course',
                   style: frontpageTextStyle,

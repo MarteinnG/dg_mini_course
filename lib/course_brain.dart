@@ -3,12 +3,19 @@ import 'question_bank.dart';
 
 class CourseBrain {
 
-  // ignore: non_constant_identifier_names
-  List<QuestionBank> questions_answers = [
+  //List<String> questions1 = [
+   // 'Who is responsible for correct marking and labelling of packages presented for transport?',
+   // 'One of the four general purposes which the marks and labels fulfil is;',
+   // 'When are freight forwarder and operator‘s DG acceptance staff required to perform a check to verify that all packages are correctly marked and labelled?'
+  //];
+
+  //int question1Number = 0;
+
+  List<QuestionBank> questionsAnswers = [
     //Chapter 1 – General
     QuestionBank(
       question1: 'Who is responsible for correct marking and labelling of packages presented for transport?',
-      answer1: 'The shipper x',
+      answer1: 'The shipper',
       answer2: 'The freight forwarder.',
       question2: 'One of the four general purposes which the marks and labels fulfil is;',
       answer3: 'they provide correct segregation procedure.',
@@ -50,11 +57,22 @@ class CourseBrain {
       answer5: '',
       answer6: ''),
   ];
+
+  int questionNumber = 0;
+
+  String getQuestionBank(){
+    return questionsAnswers[questionNumber].question1;
+    questionNumber++;
+  }
+
+  String getAnswer1(){
+    return questionsAnswers[questionNumber].answer1;
+  }
+
+  String getAnswer2(){
+    return questionsAnswers[questionNumber].answer2;
+  }
 }
 
-int _courseNumber = 0;
 
-//String getQuestionBank(){
-  //return questions_answers[_courseNumber].question1;
-//}
 

@@ -34,6 +34,21 @@ As a minimum each package or overpack containing DG must be clearly marked  to s
 •	the full name and address of the shipper and the consignee.
 ''';
 
-const labelling = '''''';
+const labelling = '''Packages containing DG must be properly labelled to indicate their contents.  There are two types of labels:
+•	hazard labels, and
+•	handling labels.
 
-const hazardAndHandlingLabels = '''''';
+The shipper is responsible for labelling a package or overpack containing DG.
+
+Labels representative of all DG required on packages within an overpack must be clearly visible or else must be reproduced on the outside of the overpack.  Only one hazard label is required for each class or division contained within the overpack.
+The operator is responsible only for replacing labels that become detached or unidentifiable during transport.
+''';
+
+const hazardAndHandlingLabels = '''Packages containing DG are identified with hazard labels, that indicate the hazards posed by the contents.
+Text indicating the nature of the hazard may be shown in the lower half of the hazard label but, except for hazard labels for radioactive material (Class 7), is not mandatory, unless there is a State or operator variation that requires the text.
+Articles and substances that have a subsidiary hazard(s) require labels identifying all of the hazards that the article or substance poses.  The hazard labels identifying these primary and subsidiary hazards must carry the class or division number in the bottom corner.
+Class 1, Explosives labels also require the compatibility group to be shown above the class number in the bottom corner.
+
+In addition to hazard labels, handling labels are used to provide information on the proper handling and stowage of packages of DG.
+Handling labels for Cargo Aircraft Only (CAO) must be used on packages that are permitted only on cargo aircraft.
+''';

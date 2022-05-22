@@ -23,9 +23,9 @@ class HazardAndHandlingLabels extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.all(15.0),
                 child: Text(
-                  general,
+                  hazardAndHandlingLabels,
                   style: TextStyle(
-                    fontSize: 14.5,
+                    fontSize: 13.0,
                     color: Colors.white,
                   ),
                 ),

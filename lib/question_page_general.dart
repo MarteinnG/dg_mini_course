@@ -1,3 +1,4 @@
+import 'package:dg_mini_course/main.dart';
 import 'package:dg_mini_course/marking_chapter2.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
@@ -18,9 +19,9 @@ class QuestionPageGeneral extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.all(15.0),
                 child: Text(
-                  'Hér kemur spurning úr General kaflanum',
+                  courseBrain.getQuestionBank(),
                   style: TextStyle(
-                    fontSize: 14.5,
+                    fontSize: 20,
                     color: Colors.white,
                   ),
                 ),
@@ -34,7 +35,7 @@ class QuestionPageGeneral extends StatelessWidget {
                     textColor: Colors.white,
                     color: Colors.blue,
                     child: Text(
-                      'Answer 1',
+                      courseBrain.getAnswer1(),
                       style: frontpageTextStyle,
                     ),
                     onPressed: () {
@@ -52,7 +53,7 @@ class QuestionPageGeneral extends StatelessWidget {
                     textColor: Colors.white,
                     color: Colors.blue,
                     child: Text(
-                      'Answer 2',
+                      courseBrain.getAnswer2(),
                       style: frontpageTextStyle,
                     ),
                     onPressed: () {

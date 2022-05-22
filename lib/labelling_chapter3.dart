@@ -23,7 +23,7 @@ class Labelling extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.all(15.0),
                 child: Text(
-                  general,
+                  labelling,
                   style: TextStyle(
                     fontSize: 14.5,
                     color: Colors.white,
