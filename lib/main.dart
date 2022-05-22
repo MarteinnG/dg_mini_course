@@ -13,9 +13,10 @@ class MiniCourse extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.black12,
         appBar: AppBar(
-          backgroundColor: Colors.blue,
+          toolbarHeight: 40,
+          backgroundColor: Colors.blueGrey,
           title: Center(
             child: Text('Marking and labelling',
             style: frontpageTextStyle,
@@ -54,7 +55,7 @@ class _CoursePageState extends State<CoursePage> {
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontStyle: FontStyle.italic,
-                  fontSize: 18.0,
+                  fontSize: 18.5,
                   color: Colors.white,
                 ),
               ),
@@ -70,7 +71,7 @@ class _CoursePageState extends State<CoursePage> {
             child: GestureDetector(
               child: FlatButton(
                 textColor: Colors.white,
-                color: Colors.blue,
+                color: Colors.blueGrey,
                 child: Text(
                   'Start the course',
                   style: frontpageTextStyle,

@@ -1,9 +1,7 @@
-import 'constants.dart';
 import 'package:flutter/material.dart';
-import 'question_bank.dart';
-import 'course_brain.dart';
+import 'constants.dart';
 
-class General extends StatelessWidget {
+class Labelling extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,7 +9,7 @@ class General extends StatelessWidget {
         toolbarHeight: 40.0,
         titleTextStyle: frontpageTextStyle,
         title: Text(
-          'Ch.1, General',
+          'Ch.3, Labelling',
         ),
       ),
       backgroundColor: Colors.black12,
@@ -21,16 +19,16 @@ class General extends StatelessWidget {
           children: [
             Expanded(
               flex: 5,
-                child: Padding(
-                  padding: EdgeInsets.all(15.0),
-                  child: Text(
-                    general,
-                    style: TextStyle(
-                      fontSize: 14.5,
-                      color: Colors.white,
-                    ),
+              child: Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Text(
+                  general,
+                  style: TextStyle(
+                    fontSize: 14.5,
+                    color: Colors.white,
                   ),
                 ),
+              ),
             ),
             Expanded(
               child: Padding(
@@ -44,7 +42,7 @@ class General extends StatelessWidget {
                       style: frontpageTextStyle,
                     ),
                     onPressed: () {
-                      print('question 1');
+                      print('question 3');
                     },
                   ),
                 ),
