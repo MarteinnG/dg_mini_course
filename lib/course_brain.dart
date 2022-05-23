@@ -58,11 +58,16 @@ class CourseBrain {
       answer6: ''),
   ];
 
+  void nextQuestion(int userChoice) {
+    if(userChoice == 2 && questionNumber == 0){
+      questionNumber = 3;
+    }
+  }
+
   int questionNumber = 0;
 
   String getQuestionBank(){
     return questionsAnswers[questionNumber].question1;
-    questionNumber++;
   }
 
   String getAnswer1(){

@@ -5,7 +5,14 @@ import 'constants.dart';
 import 'course_brain.dart';
 import 'question_bank.dart';
 
-class QuestionPageGeneral extends StatelessWidget {
+class QuestionPageGeneral extends StatefulWidget {
+  @override
+  State<QuestionPageGeneral> createState() => _QuestionPageGeneralState();
+}
+
+CourseBrain courseBrain = CourseBrain();
+
+class _QuestionPageGeneralState extends State<QuestionPageGeneral> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,7 +64,9 @@ class QuestionPageGeneral extends StatelessWidget {
                       style: frontpageTextStyle,
                     ),
                     onPressed: () {
-                      print('incorrect');
+                      setState(() {
+                        courseBrain.nextQuestion(1);
+                      });
                     },
                   ),
                 ),
@@ -69,3 +78,4 @@ class QuestionPageGeneral extends StatelessWidget {
     );
   }
 }
+
