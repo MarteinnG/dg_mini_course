@@ -1,3 +1,5 @@
+import 'package:dg_mini_course/general_chapter1.dart';
+
 import 'question_bank.dart';
 
 
@@ -85,9 +87,9 @@ class CourseBrain {
     //else if(userChoice == 1 && questionNumber == 2){
       //print('Marking');
     //}
-    else if(userChoice == 2 && questionNumber == 2){
-      print('Goes back to General');
-    }
+    //else if(userChoice == 2 && questionNumber == 2){
+      //return General();
+   // }
   }
 
   void nextQuestionCh2(int userChoice) {

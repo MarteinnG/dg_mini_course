@@ -5,6 +5,11 @@ const frontpageTextStyle = TextStyle(
   fontSize: 20.0,
 );
 
+const answerBoxTextStyle = TextStyle(
+fontSize: 18.0,
+fontStyle: FontStyle.italic,
+);
+
 const welcomeText = '''Welcome to the dangerous goods course on Marking and labeling.  
 As soon as you are ready, click the button below and you will be directed to the first chapter.  
 The course consists of four chapters which all have a question to be answered to continue.  

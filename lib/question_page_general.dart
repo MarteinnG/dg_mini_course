@@ -1,3 +1,4 @@
+import 'package:dg_mini_course/general_chapter1.dart';
 import 'package:dg_mini_course/main.dart';
 import 'package:dg_mini_course/marking_chapter2.dart';
 import 'package:flutter/material.dart';
@@ -43,7 +44,7 @@ class _QuestionPageGeneralState extends State<QuestionPageGeneral> {
                     color: Colors.blue,
                     child: Text(
                       courseBrain.getAnswer1Ch1(),
-                      style: frontpageTextStyle,
+                      style: answerBoxTextStyle,
                     ),
                     onPressed: () {
                       setState(() {
@@ -68,14 +69,19 @@ class _QuestionPageGeneralState extends State<QuestionPageGeneral> {
                     color: Colors.blue,
                     child: Text(
                       courseBrain.getAnswer2Ch1(),
-                      style: frontpageTextStyle,
+                      style: answerBoxTextStyle,
                     ),
                     onPressed: () {
                       setState(() {
                         if(courseBrain.questionNumber == 1){
                           Navigator.push(context, MaterialPageRoute(builder: (context) => Marking()));
                         }
-                        courseBrain.nextQuestionCh1(2);
+                        else if(courseBrain.questionNumber == 2){
+                          Navigator.pop((context), MaterialPageRoute(builder: (context) => General()));
+                        }
+                        else {
+                          courseBrain.nextQuestionCh1(2);
+                        }
                       });
                     },
                   ),
