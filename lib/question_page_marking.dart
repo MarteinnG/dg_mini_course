@@ -1,4 +1,5 @@
 import 'package:dg_mini_course/labelling_chapter3.dart';
+import 'package:dg_mini_course/main.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
 
@@ -16,7 +17,7 @@ class QuestionPageMarking extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.all(15.0),
                 child: Text(
-                  'Hér kemur spurning úr Marking kaflanum',
+                  courseBrain.getQuestionBankCh2(),
                   style: TextStyle(
                     fontSize: 14.5,
                     color: Colors.white,
@@ -32,7 +33,7 @@ class QuestionPageMarking extends StatelessWidget {
                     textColor: Colors.white,
                     color: Colors.blue,
                     child: Text(
-                      'Answer 1',
+                      courseBrain.getAnswer1Ch2(),
                       style: frontpageTextStyle,
                     ),
                     onPressed: () {
@@ -50,7 +51,7 @@ class QuestionPageMarking extends StatelessWidget {
                     textColor: Colors.white,
                     color: Colors.blue,
                     child: Text(
-                      'Answer 2',
+                      courseBrain.getAnswer2Ch2(),
                       style: frontpageTextStyle,
                     ),
                     onPressed: () {

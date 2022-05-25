@@ -26,7 +26,7 @@ class _QuestionPageGeneralState extends State<QuestionPageGeneral> {
               child: Padding(
                 padding: EdgeInsets.all(15.0),
                 child: Text(
-                  courseBrain.getQuestionBank(),
+                  courseBrain.getQuestionBankCh1(),
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.white,
@@ -42,11 +42,18 @@ class _QuestionPageGeneralState extends State<QuestionPageGeneral> {
                     textColor: Colors.white,
                     color: Colors.blue,
                     child: Text(
-                      courseBrain.getAnswer1(),
+                      courseBrain.getAnswer1Ch1(),
                       style: frontpageTextStyle,
                     ),
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Marking()));
+                      setState(() {
+                        if(courseBrain.questionNumber == 0 || courseBrain.questionNumber == 2){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => Marking()));
+                        }
+                        else {
+                          courseBrain.nextQuestionCh1(1);
+                        }
+                      });
                     },
                   ),
                 ),
@@ -60,12 +67,15 @@ class _QuestionPageGeneralState extends State<QuestionPageGeneral> {
                     textColor: Colors.white,
                     color: Colors.blue,
                     child: Text(
-                      courseBrain.getAnswer2(),
+                      courseBrain.getAnswer2Ch1(),
                       style: frontpageTextStyle,
                     ),
                     onPressed: () {
                       setState(() {
-                        courseBrain.nextQuestion(1);
+                        if(courseBrain.questionNumber == 1){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => Marking()));
+                        }
+                        courseBrain.nextQuestionCh1(2);
                       });
                     },
                   ),
