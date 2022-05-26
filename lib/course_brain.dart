@@ -101,23 +101,11 @@ class CourseBrain {
   }
 
   void nextQuestionCh4(int userChoice) {
-    if(userChoice == 2 && questionNumber == 0){
+    if(userChoice == 1 && questionNumber == 0){
       questionNumber = 1;
     }
-    else if(userChoice == 1 && questionNumber == 0){
-      print('Marking');
-    }
-    else if(userChoice == 1 && questionNumber == 1){
-      questionNumber = 2;
-    }
     else if(userChoice == 2 && questionNumber == 1){
-      print('Marking');
-    }
-    else if(userChoice == 1 && questionNumber == 2){
-      print('Marking');
-    }
-    else if(userChoice == 2 && questionNumber == 2){
-      print('Goes back to General');
+      questionNumber = 2;
     }
   }
 
