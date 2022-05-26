@@ -1,9 +1,16 @@
 import 'package:dg_mini_course/labelling_chapter3.dart';
 import 'package:dg_mini_course/main.dart';
+import 'package:dg_mini_course/marking_chapter2.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
+import 'course_brain.dart';
 
-class QuestionPageMarking extends StatelessWidget {
+class QuestionPageMarking extends StatefulWidget {
+  @override
+  State<QuestionPageMarking> createState() => _QuestionPageMarkingState();
+}
+
+class _QuestionPageMarkingState extends State<QuestionPageMarking> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,10 +41,17 @@ class QuestionPageMarking extends StatelessWidget {
                     color: Colors.blue,
                     child: Text(
                       courseBrain.getAnswer1Ch2(),
-                      style: frontpageTextStyle,
+                      style: answerBoxTextStyle,
                     ),
                     onPressed: () {
-                      print('incorrect');
+                      setState(() {
+                        if(courseBrain.questionNumber == 1 || courseBrain.questionNumber == 2){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => Labelling()));
+                        }
+                        else {
+                          courseBrain.nextQuestionCh2(1);
+                        }
+                      });
                     },
                   ),
                 ),
@@ -52,10 +66,21 @@ class QuestionPageMarking extends StatelessWidget {
                     color: Colors.blue,
                     child: Text(
                       courseBrain.getAnswer2Ch2(),
-                      style: frontpageTextStyle,
+                      style: answerBoxTextStyle,
                     ),
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Labelling()));
+                      setState(() {
+                        if(courseBrain.questionNumber == 0){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => Labelling()));
+                        }
+                        else if(courseBrain.questionNumber == 2){
+                          Navigator.pop((context), MaterialPageRoute(builder: (context) => Marking()));
+                          courseBrain.restart();
+                        }
+                        else {
+                          courseBrain.nextQuestionCh2(2);
+                        }
+                      });
                     },
                   ),
                 ),
@@ -67,3 +92,4 @@ class QuestionPageMarking extends StatelessWidget {
     );
   }
 }
+

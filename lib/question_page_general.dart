@@ -1,10 +1,8 @@
 import 'package:dg_mini_course/general_chapter1.dart';
-import 'package:dg_mini_course/main.dart';
 import 'package:dg_mini_course/marking_chapter2.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'course_brain.dart';
-import 'question_bank.dart';
 
 class QuestionPageGeneral extends StatefulWidget {
   @override
@@ -78,7 +76,7 @@ class _QuestionPageGeneralState extends State<QuestionPageGeneral> {
                         }
                         else if(courseBrain.questionNumber == 2){
                           Navigator.pop((context), MaterialPageRoute(builder: (context) => General()));
-                          courseBrain.restartCh1();
+                          courseBrain.restart();
                         }
                         else {
                           courseBrain.nextQuestionCh1(2);

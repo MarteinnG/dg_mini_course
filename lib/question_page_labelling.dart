@@ -1,8 +1,16 @@
 import 'package:dg_mini_course/hazard_and_handling_labels_chapter4.dart';
+import 'package:dg_mini_course/labelling_chapter3.dart';
+import 'package:dg_mini_course/main.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
+import 'course_brain.dart';
 
-class QuestionPageLabelling extends StatelessWidget {
+class QuestionPageLabelling extends StatefulWidget {
+  @override
+  State<QuestionPageLabelling> createState() => _QuestionPageLabellingState();
+}
+
+class _QuestionPageLabellingState extends State<QuestionPageLabelling> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +24,7 @@ class QuestionPageLabelling extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.all(15.0),
                 child: Text(
-                  'Hér kemur spurning úr Labelling kaflanum',
+                  courseBrain.getQuestionBankCh3(),
                   style: TextStyle(
                     fontSize: 14.5,
                     color: Colors.white,
@@ -32,11 +40,22 @@ class QuestionPageLabelling extends StatelessWidget {
                     textColor: Colors.white,
                     color: Colors.blue,
                     child: Text(
-                      'Answer 1',
-                      style: frontpageTextStyle,
+                      courseBrain.getAnswer1Ch3(),
+                      style: answerBoxTextStyle,
                     ),
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => HazardAndHandlingLabels()));
+                      setState(() {
+                        if(courseBrain.questionNumber == 0 || courseBrain.questionNumber == 1){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => HazardAndHandlingLabels()));
+                        }
+                        else if(courseBrain.questionNumber == 2){
+                          Navigator.pop((context), MaterialPageRoute(builder: (context) => Labelling()));
+                          courseBrain.restart();
+                        }
+                        else {
+                          courseBrain.nextQuestionCh3(1);
+                        }
+                      });
                     },
                   ),
                 ),
@@ -50,11 +69,18 @@ class QuestionPageLabelling extends StatelessWidget {
                     textColor: Colors.white,
                     color: Colors.blue,
                     child: Text(
-                      'Answer 2',
-                      style: frontpageTextStyle,
+                      courseBrain.getAnswer2Ch3(),
+                      style: answerBoxTextStyle,
                     ),
                     onPressed: () {
-                      print('incorrect');
+                      setState(() {
+                        if(courseBrain.questionNumber == 2){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => HazardAndHandlingLabels()));
+                        }
+                        else {
+                          courseBrain.nextQuestionCh3(2);
+                        }
+                      });
                     },
                   ),
                 ),
