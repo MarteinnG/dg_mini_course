@@ -13,8 +13,8 @@ class CourseBrain {
       answer2: 'The freight forwarder.'),
     QuestionBankCh1(
       question1: 'One of the four general purposes which the marks and labels fulfil is;',
-      answer1: 'they provide correct segregation procedure.',
-      answer2: 'they provide safe handling and stowage information.'),
+      answer1: 'They provide correct segregation procedure.',
+      answer2: 'They provide safe handling and stowage information.'),
     QuestionBankCh1(
       question1: 'When are freight forwarder and operator‘s DG acceptance staff required to perform a check to verify that all packages are correctly marked and labelled?',
       answer1: 'Before accepting the consignment for carriage by air',
@@ -26,14 +26,14 @@ class CourseBrain {
     QuestionBankCh2(
       question1: 'There are two types of package marks.  What are they?',
       answer1: 'Handling label marks and hazard label marks.',
-      answer2: 'Marks which identify the use of a packaging and marks which identify the design or specification of a packaging. x'),
+      answer2: 'Marks identifying the use, and marks identifying the design of a packaging.'),
     QuestionBankCh2(
       question1: 'What three „packagings use marks“ are required on all packages or overpacks containing dangerous goods?',
-      answer1: 'Proper shipping name, UN or ID Number, full name and address of the shipper and consignee. x',
+      answer1: 'Proper shipping name, UN or ID Number, full name and address of the shipper and consignee.',
       answer2: 'UN or ID Number, Environmentally Hazardous Substance mark, Proper shipping name.'),
     QuestionBankCh2(
       question1: 'For each package and/or overpack containing DG that requires marking, the shipper must remove or obliterate any irrelevant marks.',
-      answer1: 'True  x',
+      answer1: 'True',
       answer2: 'False'),
   ];
 
@@ -41,16 +41,16 @@ class CourseBrain {
   List<QuestionBankCh3> questAnsLabelling = [
     QuestionBankCh3(
       question1: 'What are the two types of labels?',
-      answer1: 'Hazard label and Handling label x',
+      answer1: 'Hazard label and Handling label',
       answer2: 'CAO label and Classification label'),
     QuestionBankCh3(
       question1: 'Who is responsible for labelling a package or overpack containing DG?',
-      answer1: 'The shipper x',
+      answer1: 'The shipper',
       answer2: 'The operator'),
     QuestionBankCh3(
       question1: 'What is the operator‘s responsibility in terms of labelling package or overpack containing DG?',
       answer1: 'The operator is responsible for labelling all packages and overpacks containing DG.',
-      answer2: 'The operator is responsible only for replacing labels that becomes detached or unidentifiable during transport. x'),
+      answer2: 'The operator is responsible only for replacing labels that becomes detached or unidentifiable.'),
     ];
 
     //Chapter 4 – Hazard- and Handling Labels
@@ -58,14 +58,14 @@ class CourseBrain {
     QuestionBankCh4(
       question1: 'Is it mandatory to show the nature of hazard in the lower half of the hazard label?',
       answer1: 'Yes, the nature of hazard should always be shown on the hazard label.',
-      answer2: 'No, except for hazard label for radioactive material (Class 7). x'),
+      answer2: 'No, except for hazard label for radioactive material (Class 7).'),
     QuestionBankCh4(
       question1: 'What is the main purpose of the handling labels?',
-      answer1: 'To provide information on the proper handling and stowage of packages containing DG  x',
+      answer1: 'To provide information on the proper handling and stowage of packages containing DG',
       answer2: 'To provide information on subsidiary hazard posed by the article or substance.'),
     QuestionBankCh4(
       question1: 'What is the meaning of the CAO label?',
-      answer1: 'That packages on which it appears must not be loaded on passenger aircraft x',
+      answer1: 'That packages on which it appears must not be loaded on passenger aircraft.',
       answer2: 'That packages on which it appears can be loaded on either passenger aircraft or cargo aircraft.'),
   ];
 

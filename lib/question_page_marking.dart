@@ -3,7 +3,6 @@ import 'package:dg_mini_course/main.dart';
 import 'package:dg_mini_course/marking_chapter2.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
-import 'course_brain.dart';
 
 class QuestionPageMarking extends StatefulWidget {
   @override
@@ -14,21 +13,18 @@ class _QuestionPageMarkingState extends State<QuestionPageMarking> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black12,
+      backgroundColor: Colors.blueGrey,
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(
-              flex: 5,
+              flex: 4,
               child: Padding(
-                padding: EdgeInsets.all(15.0),
+                padding: EdgeInsets.symmetric(vertical: 35.0, horizontal: 20.0),
                 child: Text(
                   courseBrain.getQuestionBankCh2(),
-                  style: TextStyle(
-                    fontSize: 14.5,
-                    color: Colors.white,
-                  ),
+                  style: questionPageTextStyle,
                 ),
               ),
             ),
@@ -38,17 +34,20 @@ class _QuestionPageMarkingState extends State<QuestionPageMarking> {
                 child: GestureDetector(
                   child: FlatButton(
                     textColor: Colors.white,
-                    color: Colors.blue,
+                    color: Colors.black54,
                     child: Text(
                       courseBrain.getAnswer1Ch2(),
                       style: answerBoxTextStyle,
                     ),
                     onPressed: () {
                       setState(() {
-                        if(courseBrain.questionNumber == 1 || courseBrain.questionNumber == 2){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => Labelling()));
-                        }
-                        else {
+                        if (courseBrain.questionNumber == 1 ||
+                            courseBrain.questionNumber == 2) {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Labelling()));
+                        } else {
                           courseBrain.nextQuestionCh2(1);
                         }
                       });
@@ -63,21 +62,25 @@ class _QuestionPageMarkingState extends State<QuestionPageMarking> {
                 child: GestureDetector(
                   child: FlatButton(
                     textColor: Colors.white,
-                    color: Colors.blue,
+                    color: Colors.black54,
                     child: Text(
                       courseBrain.getAnswer2Ch2(),
                       style: answerBoxTextStyle,
                     ),
                     onPressed: () {
                       setState(() {
-                        if(courseBrain.questionNumber == 0){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => Labelling()));
-                        }
-                        else if(courseBrain.questionNumber == 2){
-                          Navigator.pop((context), MaterialPageRoute(builder: (context) => Marking()));
+                        if (courseBrain.questionNumber == 0) {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Labelling()));
+                        } else if (courseBrain.questionNumber == 2) {
+                          Navigator.pop(
+                              (context),
+                              MaterialPageRoute(
+                                  builder: (context) => Marking()));
                           courseBrain.restart();
-                        }
-                        else {
+                        } else {
                           courseBrain.nextQuestionCh2(2);
                         }
                       });
@@ -92,4 +95,3 @@ class _QuestionPageMarkingState extends State<QuestionPageMarking> {
     );
   }
 }
-

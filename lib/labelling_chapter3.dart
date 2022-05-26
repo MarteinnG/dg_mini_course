@@ -7,10 +7,13 @@ class Labelling extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         toolbarHeight: 40.0,
         titleTextStyle: frontpageTextStyle,
-        title: Text(
-          'Ch.3, Labelling',
+        title: Center(
+          child: Text(
+            'Labelling',
+          ),
         ),
       ),
       backgroundColor: Colors.black12,
@@ -43,7 +46,10 @@ class Labelling extends StatelessWidget {
                       style: frontpageTextStyle,
                     ),
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => QuestionPageLabelling()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => QuestionPageLabelling()));
                     },
                   ),
                 ),

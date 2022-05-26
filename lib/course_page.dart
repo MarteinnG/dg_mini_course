@@ -24,7 +24,7 @@ class _CoursePageState extends State<CoursePage> {
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontStyle: FontStyle.italic,
-                  fontSize: 18.5,
+                  fontSize: 18.0,
                   color: Colors.white,
                 ),
               ),
@@ -46,7 +46,8 @@ class _CoursePageState extends State<CoursePage> {
                   style: frontpageTextStyle,
                 ),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => General()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => General()));
                 },
               ),
             ),

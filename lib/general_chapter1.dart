@@ -1,19 +1,20 @@
 import 'package:dg_mini_course/question_page_general.dart';
-
 import 'constants.dart';
 import 'package:flutter/material.dart';
-import 'question_bank.dart';
-import 'course_brain.dart';
 
 class General extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue,
+        automaticallyImplyLeading: false,
         toolbarHeight: 40.0,
         titleTextStyle: frontpageTextStyle,
-        title: Text(
-          'Ch.1, General',
+        title: Center(
+          child: Text(
+            'General',
+          ),
         ),
       ),
       backgroundColor: Colors.black12,
@@ -23,16 +24,16 @@ class General extends StatelessWidget {
           children: [
             Expanded(
               flex: 5,
-                child: Padding(
-                  padding: EdgeInsets.all(15.0),
-                  child: Text(
-                    general,
-                    style: TextStyle(
-                      fontSize: 14.5,
-                      color: Colors.white,
-                    ),
+              child: Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Text(
+                  general,
+                  style: TextStyle(
+                    fontSize: 14.5,
+                    color: Colors.white,
                   ),
                 ),
+              ),
             ),
             Expanded(
               child: Padding(
@@ -46,7 +47,10 @@ class General extends StatelessWidget {
                       style: frontpageTextStyle,
                     ),
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => QuestionPageGeneral()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => QuestionPageGeneral()));
                     },
                   ),
                 ),

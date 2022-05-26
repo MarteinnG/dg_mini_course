@@ -12,13 +12,15 @@ class MiniCourse extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.black12,
         appBar: AppBar(
           toolbarHeight: 40,
           title: Center(
-            child: Text('Marking and labelling',
-            style: frontpageTextStyle,
+            child: Text(
+              'Marking and labelling',
+              style: frontpageTextStyle,
             ),
           ),
         ),
@@ -32,7 +34,3 @@ class MiniCourse extends StatelessWidget {
     );
   }
 }
-
-
-
-

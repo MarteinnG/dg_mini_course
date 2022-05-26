@@ -7,10 +7,13 @@ class HazardAndHandlingLabels extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         toolbarHeight: 40.0,
         titleTextStyle: frontpageTextStyle,
-        title: Text(
-          'Ch.4, Hazard- and Handling labels',
+        title: Center(
+          child: Text(
+            'Hazard- and Handling labels',
+          ),
         ),
       ),
       backgroundColor: Colors.black12,
@@ -43,7 +46,11 @@ class HazardAndHandlingLabels extends StatelessWidget {
                       style: frontpageTextStyle,
                     ),
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => QuestionPageHazardAndHandlingLabels()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  QuestionPageHazardAndHandlingLabels()));
                     },
                   ),
                 ),

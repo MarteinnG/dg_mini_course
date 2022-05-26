@@ -21,15 +21,12 @@ class _QuestionPageGeneralState extends State<QuestionPageGeneral> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(
-              flex: 5,
+              flex: 4,
               child: Padding(
-                padding: EdgeInsets.all(15.0),
+                padding: EdgeInsets.symmetric(vertical: 35.0, horizontal: 20.0),
                 child: Text(
                   courseBrain.getQuestionBankCh1(),
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white,
-                  ),
+                  style: questionPageTextStyle,
                 ),
               ),
             ),
@@ -46,10 +43,13 @@ class _QuestionPageGeneralState extends State<QuestionPageGeneral> {
                     ),
                     onPressed: () {
                       setState(() {
-                        if(courseBrain.questionNumber == 0 || courseBrain.questionNumber == 2){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => Marking()));
-                        }
-                        else {
+                        if (courseBrain.questionNumber == 0 ||
+                            courseBrain.questionNumber == 2) {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Marking()));
+                        } else {
                           courseBrain.nextQuestionCh1(1);
                         }
                       });
@@ -71,14 +71,18 @@ class _QuestionPageGeneralState extends State<QuestionPageGeneral> {
                     ),
                     onPressed: () {
                       setState(() {
-                        if(courseBrain.questionNumber == 1){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => Marking()));
-                        }
-                        else if(courseBrain.questionNumber == 2){
-                          Navigator.pop((context), MaterialPageRoute(builder: (context) => General()));
+                        if (courseBrain.questionNumber == 1) {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Marking()));
+                        } else if (courseBrain.questionNumber == 2) {
+                          Navigator.pop(
+                              (context),
+                              MaterialPageRoute(
+                                  builder: (context) => General()));
                           courseBrain.restart();
-                        }
-                        else {
+                        } else {
                           courseBrain.nextQuestionCh1(2);
                         }
                       });
@@ -93,4 +97,3 @@ class _QuestionPageGeneralState extends State<QuestionPageGeneral> {
     );
   }
 }
-

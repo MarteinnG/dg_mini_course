@@ -3,7 +3,6 @@ import 'package:dg_mini_course/labelling_chapter3.dart';
 import 'package:dg_mini_course/main.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
-import 'course_brain.dart';
 
 class QuestionPageLabelling extends StatefulWidget {
   @override
@@ -20,15 +19,12 @@ class _QuestionPageLabellingState extends State<QuestionPageLabelling> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(
-              flex: 5,
+              flex: 4,
               child: Padding(
-                padding: EdgeInsets.all(15.0),
+                padding: EdgeInsets.symmetric(vertical: 35.0, horizontal: 20.0),
                 child: Text(
                   courseBrain.getQuestionBankCh3(),
-                  style: TextStyle(
-                    fontSize: 14.5,
-                    color: Colors.white,
-                  ),
+                  style: questionPageTextStyle,
                 ),
               ),
             ),
@@ -45,14 +41,20 @@ class _QuestionPageLabellingState extends State<QuestionPageLabelling> {
                     ),
                     onPressed: () {
                       setState(() {
-                        if(courseBrain.questionNumber == 0 || courseBrain.questionNumber == 1){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => HazardAndHandlingLabels()));
-                        }
-                        else if(courseBrain.questionNumber == 2){
-                          Navigator.pop((context), MaterialPageRoute(builder: (context) => Labelling()));
+                        if (courseBrain.questionNumber == 0 ||
+                            courseBrain.questionNumber == 1) {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      HazardAndHandlingLabels()));
+                        } else if (courseBrain.questionNumber == 2) {
+                          Navigator.pop(
+                              (context),
+                              MaterialPageRoute(
+                                  builder: (context) => Labelling()));
                           courseBrain.restart();
-                        }
-                        else {
+                        } else {
                           courseBrain.nextQuestionCh3(1);
                         }
                       });
@@ -74,10 +76,13 @@ class _QuestionPageLabellingState extends State<QuestionPageLabelling> {
                     ),
                     onPressed: () {
                       setState(() {
-                        if(courseBrain.questionNumber == 2){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => HazardAndHandlingLabels()));
-                        }
-                        else {
+                        if (courseBrain.questionNumber == 2) {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      HazardAndHandlingLabels()));
+                        } else {
                           courseBrain.nextQuestionCh3(2);
                         }
                       });
