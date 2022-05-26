@@ -78,6 +78,7 @@ class _QuestionPageGeneralState extends State<QuestionPageGeneral> {
                         }
                         else if(courseBrain.questionNumber == 2){
                           Navigator.pop((context), MaterialPageRoute(builder: (context) => General()));
+                          courseBrain.restartCh1();
                         }
                         else {
                           courseBrain.nextQuestionCh1(2);

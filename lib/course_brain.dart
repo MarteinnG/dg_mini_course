@@ -87,9 +87,10 @@ class CourseBrain {
     //else if(userChoice == 1 && questionNumber == 2){
       //print('Marking');
     //}
-    //else if(userChoice == 2 && questionNumber == 2){
-      //return General();
-   // }
+  }
+
+  void restartCh1(){
+    questionNumber = 0;
   }
 
   void nextQuestionCh2(int userChoice) {
