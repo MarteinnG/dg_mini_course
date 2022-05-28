@@ -1,3 +1,4 @@
+import 'package:dg_mini_course/course_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
@@ -11,7 +12,7 @@ class _ClosingPageState extends State<ClosingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black12,
+      backgroundColor: Colors.blueGrey,
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -25,7 +26,7 @@ class _ClosingPageState extends State<ClosingPage> {
                   style: TextStyle(
                     fontStyle: FontStyle.italic,
                     fontSize: 17.0,
-                    color: Colors.white,
+                    color: Colors.black,
                   ),
                 ),
               ),
@@ -36,7 +37,7 @@ class _ClosingPageState extends State<ClosingPage> {
                 padding: EdgeInsets.symmetric(horizontal: 40),
                 child: Image.asset(
                   'images/graduation.png',
-                  scale: 4,
+                  scale: 3,
                   alignment: Alignment.topRight,
                 ),
               ),
@@ -50,7 +51,7 @@ class _ClosingPageState extends State<ClosingPage> {
                   style: TextStyle(
                     fontStyle: FontStyle.italic,
                     fontSize: 17.0,
-                    color: Colors.white,
+                    color: Colors.black,
                   ),
                 ),
               ),
@@ -64,7 +65,26 @@ class _ClosingPageState extends State<ClosingPage> {
                   ),
                 ),
               ),
-            SizedBox(height: 5,)
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 110, vertical: 30),
+                child: GestureDetector(
+                  child: FlatButton(
+                    color: Colors.blue,
+                    child: Text(
+                      'Back home ',
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontStyle: FontStyle.italic,
+                      ),
+                    ),
+                    onPressed: (){
+                      //Navigator.push((context), MaterialPageRoute(builder: (context) => CoursePage()));
+                    },
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),

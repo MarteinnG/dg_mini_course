@@ -65,8 +65,8 @@ In addition to hazard labels, handling labels are used to provide information on
 Handling labels for Cargo Aircraft Only (CAO) must be used on packages that are permitted only on cargo aircraft.
 ''';
 
-const congrats = '''Congratulations!!  
+const congrats = '''Congratulations!!
 You have successfully finished the dangerous goods mini course on Marking and Labelling.''';
 
-const certificate = '''You have earned your certificate, goahead and print it out.  
+const certificate = '''Here's your well deserved certificate, go ahead and print it out.  
 Well done!''';
