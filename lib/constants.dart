@@ -64,3 +64,9 @@ Class 1, Explosives labels also require the compatibility group to be shown abov
 In addition to hazard labels, handling labels are used to provide information on the proper handling and stowage of packages of DG.
 Handling labels for Cargo Aircraft Only (CAO) must be used on packages that are permitted only on cargo aircraft.
 ''';
+
+const congrats = '''Congratulations!!  
+You have successfully finished the dangerous goods mini course on Marking and Labelling.''';
+
+const certificate = '''You have earned your certificate, goahead and print it out.  
+Well done!''';

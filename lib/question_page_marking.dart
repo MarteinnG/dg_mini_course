@@ -13,7 +13,7 @@ class _QuestionPageMarkingState extends State<QuestionPageMarking> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.black12,
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -34,7 +34,7 @@ class _QuestionPageMarkingState extends State<QuestionPageMarking> {
                 child: GestureDetector(
                   child: FlatButton(
                     textColor: Colors.white,
-                    color: Colors.black54,
+                    color: Colors.blue,
                     child: Text(
                       courseBrain.getAnswer1Ch2(),
                       style: answerBoxTextStyle,
@@ -62,7 +62,7 @@ class _QuestionPageMarkingState extends State<QuestionPageMarking> {
                 child: GestureDetector(
                   child: FlatButton(
                     textColor: Colors.white,
-                    color: Colors.black54,
+                    color: Colors.blue,
                     child: Text(
                       courseBrain.getAnswer2Ch2(),
                       style: answerBoxTextStyle,

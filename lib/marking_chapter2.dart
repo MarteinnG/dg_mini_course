@@ -7,7 +7,7 @@ class Marking extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black12,
+        backgroundColor: Colors.blue,
         automaticallyImplyLeading: false,
         toolbarHeight: 40.0,
         titleTextStyle: frontpageTextStyle,
@@ -17,7 +17,7 @@ class Marking extends StatelessWidget {
           ),
         ),
       ),
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.black12,
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -41,7 +41,7 @@ class Marking extends StatelessWidget {
                 child: GestureDetector(
                   child: FlatButton(
                     textColor: Colors.white,
-                    color: Colors.black54,
+                    color: Colors.blue,
                     child: Text(
                       'Question',
                       style: frontpageTextStyle,
