@@ -1,4 +1,4 @@
-import 'package:dg_mini_course/course_page.dart';
+import 'package:dg_mini_course/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
@@ -19,7 +19,7 @@ class _ClosingPageState extends State<ClosingPage> {
           children: [
             Expanded(
               child: Padding(
-                padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 15.0),
+                padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 15.0),
                 child: Text(
                   congrats,
                   textAlign: TextAlign.left,
@@ -34,7 +34,9 @@ class _ClosingPageState extends State<ClosingPage> {
             Expanded(
               flex: 1,
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 40),
+                padding: EdgeInsets.symmetric(
+                  horizontal: 40,
+                ),
                 child: Image.asset(
                   'images/graduation.png',
                   scale: 3,
@@ -59,28 +61,29 @@ class _ClosingPageState extends State<ClosingPage> {
             Expanded(
               flex: 2,
               child: Padding(
-                padding: EdgeInsets.symmetric(vertical: 5, horizontal: 15),
-                  child: Image.asset(
-                    'images/certificate.png',
-                  ),
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                child: Image.asset(
+                  'images/certificate.png',
                 ),
               ),
-            Expanded(
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 110, vertical: 30),
-                child: GestureDetector(
-                  child: FlatButton(
-                    color: Colors.blue,
-                    child: Text(
-                      'Back home ',
-                      style: TextStyle(
-                        fontSize: 10,
-                        fontStyle: FontStyle.italic,
-                      ),
+            ),
+            Container(
+              height: 51,
+              child: FractionallySizedBox(
+                alignment: Alignment.topRight,
+                heightFactor: 1,
+                widthFactor: 1,
+                child: FlatButton(
+                  onPressed: () {
+                    Navigator.push((context),
+                        MaterialPageRoute(builder: (context) => MiniCourse()));
+                  },
+                  child: Text(
+                    'Back to home screen',
+                    style: TextStyle(
+                      fontStyle: FontStyle.italic,
+                      fontSize: 10,
                     ),
-                    onPressed: (){
-                      //Navigator.push((context), MaterialPageRoute(builder: (context) => CoursePage()));
-                    },
                   ),
                 ),
               ),
@@ -91,3 +94,6 @@ class _ClosingPageState extends State<ClosingPage> {
     );
   }
 }
+
+//child: Padding(
+//padding: EdgeInsets.symmetric(horizontal: 110, vertical: 30),

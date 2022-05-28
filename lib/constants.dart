@@ -68,5 +68,5 @@ Handling labels for Cargo Aircraft Only (CAO) must be used on packages that are 
 const congrats = '''Congratulations!!
 You have successfully finished the dangerous goods mini course on Marking and Labelling.''';
 
-const certificate = '''Here's your well deserved certificate, go ahead and print it out.  
+const certificate = '''Here's your well deserved certificate, place it in your file.  
 Well done!''';
